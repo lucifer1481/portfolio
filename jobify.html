@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jobify Jobs</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: url("lavender.jpg");
+            margin: 0;
+            padding: 0;
+        }
+        .navbar {
+            background-color:rgb(79, 25, 117);
+            padding: 15px 0;
+            text-align: center;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            margin: 0 10px;
+            display: inline-block;
+        }
+        .navbar a:hover {
+            background-color: #555;
+            border-radius: 5px;
+        }
+        .container {
+            background: #b37dc4;
+            padding: 30px;
+            max-width: 1000px;
+            margin: 30px auto;
+            border-radius: 10px;
+            box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header img {
+            border-radius: 5px;
+        }
+        .header h2 {
+            font-size: 36px;
+            color: #333;
+        }
+        .ai-mock-btn {
+            background-color: #9200be;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .ai-mock-btn:hover {
+            background-color:#9200be;
+        }
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .filters select {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            background-color: #fafafa;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .filters select:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+        .jobs-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .job-card {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+        }
+        .job-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.15);
+        }
+        .job-card h4 {
+            font-size: 20px;
+            color: #333;
+        }
+        .job-card p {
+            font-size: 16px;
+            color: #777;
+            margin: 10px 0;
+        }
+        .apply-btn {
+            background-color:  #9200be;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .apply-btn:hover {
+            background-color:  #9200be;
+        }
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            background-color: #f1f1f1;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .footer p {
+            color: #555;
+            font-size: 16px;
+            margin-bottom: 15px;
+        }
+        .footer .create-btn {
+            background-color:  #9200be;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .footer .create-btn:hover {
+            background-color: #9200be;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="navbar">
+        <a href="home.html">Home</a>
+        <a href="internship.html">Internships</a>
+        <a href="jobs.html">Jobs</a>
+        <a href="simulation.html">Simulation</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="profile.html">Profile</a>
+        <a href="./profile.html">
+            <img class="profile-avatar" src="src/img/avatar.png" alt="Profile Avatar">
+        </a>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <img src="logo.png" alt="Jobify Logo" width="50">
+                <h2>Jobs</h2>
+            </div>
+            <button class="ai-mock-btn" onclick="window.location.href='mock interview.html'">AI Mock Interview</button>
+        </div>
+
+        <div class="filters">
+            <select>
+                <option>Location</option>
+                <option>Coimbatore</option>
+                <option>Chennai</option>
+            </select>
+            <select>
+                <option>Experience</option>
+                <option>Fresher</option>
+                <option>1-2 years</option>
+            </select>
+            <select>
+                <option>Salary</option>
+                <option>0-10k</option>
+                <option>10k-20k</option>
+            </select>
+            <select>
+                <option>Role</option>
+                <option>Full Stack Developer</option>
+                <option>UI/UX Designer</option>
+            </select>
+            <select>
+                <option>Domain</option>
+                <option>Software</option>
+                <option>Design</option>
+            </select>
+            <select>
+                <option>Industry</option>
+                <option>IT</option>
+                <option>Creative</option>
+            </select>
+            <select>
+                <option>Skills</option>
+                <option>JavaScript</option>
+                <option>Figma</option>
+            </select>
+            <select>
+                <option>Qualification</option>
+                <option>Bachelor's</option>
+                <option>Master's</option>
+            </select>
+        </div>
+
+        <h3>RECOMMENDED JOBS FOR YOU</h3>
+        <div class="jobs-section">
+            <div class="job-card">
+                <h4>Full Stack Developer</h4>
+                <p>Elite Group of Companies<br>Location: Coimbatore<br>Salary: Not Disclosed</p>
+                <button class="apply-btn">APPLY</button>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Get customized resumes tailored to the specific requirements of each job application, powered by AI</p>
+            <a href="resume.html">
+                <button class="create-btn">Create My Resume</button>
+            </a>
+        </div>
+    </div>
+
+</body>
+</html>
